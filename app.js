@@ -18,6 +18,22 @@ hardBtn.addEventListener("click", function() {
 	hardBtn.classList.add("selected");
 });
 
+button.addEventListener("click", function(){
+	// When button is clicked generate new colors
+	colors = generateRandomColors(6);
+	// Pick a new random color from array
+	pickedColor = pickColor();
+	// Change colorDisplay to match picked color
+	colorDisplay.textContent = pickedColor;
+	// Change colors of the squares
+	for (let i = 0; i < squares.length; i++) {
+		squares[i].style.backgroundColor = colors[i];
+	}
+
+	h1.style.backgroundColor = "#232323";
+	button.textContent = "New Colors";
+});
+
 for (let i = 0; i < squares.length; i++) {
 	// Add initial colors to squares
 	squares[i].style.backgroundColor = colors[i];
@@ -77,21 +93,7 @@ function randomColor() {
 	return "rgb(" + r + ", " + g + ", " + b + ")";
 }
 
-button.addEventListener("click", function(){
-	// When button is clicked generate new colors
-	colors = generateRandomColors(6);
-	// Pick a new random color from array
-	pickedColor = pickColor();
-	// Change colorDisplay to match picked color
-	colorDisplay.textContent = pickedColor;
-	// Change colors of the squares
-	for (let i = 0; i < squares.length; i++) {
-		squares[i].style.backgroundColor = colors[i];
-	}
 
-	h1.style.backgroundColor = "#232323";
-	button.textContent = "New Colors";
-});
 
 
 
