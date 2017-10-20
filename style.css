@@ -1,0 +1,44 @@
+html, body {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: #232323;
+}
+
+#header-bar {
+	background-color: lightblue;
+	height: 200px;
+	width: 100%;
+}
+
+#info-bar {
+	height: 30px;
+	width: 100%;
+	background: white;
+	text-align: center;
+	padding-botton: 30px;
+	margin-bottom: 50px;
+
+}
+
+#container {
+	max-width: 600px;
+	margin: 0 auto;
+
+}
+
+.square {
+	width: 30%;
+	background: blue;
+	padding-bottom: 30%;
+	float: left;
+	margin: 1.66%;
+	border-radius: 10%;
+}
+
+.selected {
+	background: blue;
+}
+
