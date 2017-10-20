@@ -26,7 +26,7 @@ easyBtn.addEventListener("click", function() {
         }
     }
 });
-
+colorDisplay
 hardBtn.addEventListener("click", function() {
     easyBtn.classList.remove("selected");
     hardBtn.classList.add("selected");
@@ -54,6 +54,7 @@ resetBtn.addEventListener("click", function() {
 
     h1.style.backgroundColor = "steelblue";
     resetBtn.textContent = "New Colors";
+    hiddenDisplay.textContent = "";
 });
 
 for (let i = 0; i < squares.length; i++) {
