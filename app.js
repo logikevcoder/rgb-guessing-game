@@ -6,7 +6,6 @@ const h1 = document.querySelector("h1");
 const resetBtn = document.querySelector("#resetBtn");
 const squares = document.querySelectorAll(".square");
 const modeButtons = document.querySelectorAll(".mode");
-colorDisplay.textContent = pickedColor;
 
 
 init();
@@ -15,8 +14,9 @@ function init() {
     setUpModeButtons();
     setUpSquares();
     reset();
-}
 
+}
+colorDisplay
 function setUpModeButtons() {
     // Mode buttons event listeners
     for (let i = 0; i < modeButtons.length; i++) {
@@ -49,6 +49,8 @@ function setUpSquares() {
                 // If wrong guess change selected square to background color
                 this.style.background = "#232323";
                 hiddenDisplay.textContent = "Try again";
+                colorDisplay.textContent = pickedColor;
+
             }
 
         });
@@ -78,6 +80,8 @@ function reset() {
         }
     }
     h1.style.backgroundColor = "steelblue";
+    colorDisplay.textContent = pickedColor;
+
 }
 
 
@@ -92,9 +96,7 @@ function changeColors(color) {
         // Change each color to match clicked color
         squares[i].style.background = color;
     }
-
 }
-
 
 function pickColor() {
     let random = Math.floor(Math.random() * colors.length);
